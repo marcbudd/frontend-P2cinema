@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {AddFilmService} from "./add-film.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend-P2cinema';
+
+  // movies = ["Die Feuerzangenbowle", "Love Actually", "Kevin - Allein zu Haus"];
+
+  constructor(public fs: AddFilmService) {
+
+  }
 }
