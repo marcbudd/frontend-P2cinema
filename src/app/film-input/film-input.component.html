@@ -1,0 +1,11 @@
+
+<div class="standard-card card">
+  <p>Füge einen neuen Film hinzu:</p>
+
+  <mat-form-field class="input-field">
+    <mat-label>Filmname</mat-label>
+    <input matInput type="text" [(ngModel)]="movie_name">
+  </mat-form-field>
+
+  <button mat-flat-button (click)="fs.addMovie(movie_name); clearInput()">Film hinzufügen</button>
+</div>

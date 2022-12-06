@@ -1,0 +1,27 @@
+.card {
+  min-height: 250px;
+  width: 250px;
+  position: relative;
+
+  p {
+    padding-left: 16px;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 18px;
+    position: center;
+  }
+
+  button {
+    width: 100%;
+    min-height: 35px;
+    position: absolute;
+    background-color: white;
+    bottom: 0;
+    border: unset;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.05)
+    }
+  }
+}
