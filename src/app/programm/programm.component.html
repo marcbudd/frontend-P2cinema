@@ -1,0 +1,81 @@
+<div class = background>
+</div>
+<div class = foreground>
+<div class = foregroundleftsite>
+  <!-- First Select Button     -->
+  <div class = standort>
+    <mat-form-field appearance="fill" >
+      <mat-label>Standort auswählen</mat-label>
+      <mat-select [(ngModel)] = "selectedCity" (selectionChange)="setFilms()" (selectionChange)="proofDisableDatepicker()" >
+        <mat-option *ngFor="let city of existCity" [value] = "city">
+          {{city}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+<!-- Second Select Button     -->
+  <div class = film>
+    <mat-form-field appearance="fill" >
+      <mat-label>Film auswählen</mat-label>
+      <mat-select [(ngModel)] = "selectedFilm" (selectionChange)="proofDisableDatepicker()" (selectionChange)="proofDisabledForegroundRight()" (selectionChange)="setInformationForegroundRight()" [disabled]="disabledFilm">
+        <mat-option *ngFor="let film of films" [value] = "film">
+          {{film}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+    <!-- Date Picker     -->
+  <div class = datum>
+    <mat-form-field class="Datepicker" appearance="fill">
+      <mat-label>Wähle ein Datum</mat-label>
+      <input matInput [min]="minDate" [max]="maxDate" [matDatepickerFilter]="myFilter" [matDatepicker]="picker" [(ngModel)]="selectedDate" [disabled]="disabledDatepicker" (dateChange)="proofDisableTime()">
+      <mat-hint>MM/DD/YYYY</mat-hint>
+      <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+  <!-- zeit auswählen -->
+  <div class = zeit>
+    <mat-form-field appearance="fill" >
+      <mat-label>Zeit auswählen</mat-label>
+      <mat-select [(ngModel)] = "selectedTime" [disabled]="disabledTime" (selectionChange)="proofDisableButton()">
+        <mat-option *ngFor="let time of times" [value] = "time">
+          {{time}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field> 
+  </div>
+<!-- Button weiter -->
+  <div class = button>
+    <button class = buttonWeiter mat-raised-button color="primary" [disabled]="disabledButton"><span>Weiter</span></button>
+  </div>
+</div>
+
+<div class = foregroundrightside [hidden] = "disabledForegroundRight">
+  <div class = imageAndText>
+    <div class = image>
+      <img src="{{filmPicture}}">
+    </div>
+    <div class = onlyText>
+      <div class = generalinformation>
+        <p>{{filmclassification}}</p>
+      </div>
+      <div class = description>
+        <p>
+        {{filmInformation}}
+        </p>   
+      </div>
+    </div>
+  </div>
+  <div class = trailer>
+    <iframe 
+      width="560" 
+      height="315" 
+      [src]="safeSrc" 
+      title="YouTube video player" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+    </iframe>  
+  </div>
+</div>
+</div>

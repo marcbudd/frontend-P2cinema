@@ -1,0 +1,30 @@
+.specialsBackground {
+    background-image: url(../../assets/img/Cinema.PNG) ;
+    filter: blur(8px);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .specials{
+    background-color: rgba(0,0,0, 0.7); 
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 30px;
+    text-align: center;
+    max-height: 60%;
+    overflow:scroll;
+  }
+  .componentsInLoop{
+    img{
+        max-height: 250px;
+        max-width: 500px;
+    }
+  }

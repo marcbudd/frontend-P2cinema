@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+  }
+
+.background{
+    background: linear-gradient(to right, rgba(0,0,0,1) 0.2%, transparent 90%), url(../../assets/img/CinemaBG2.png);
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.foregroundleftsite{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    border: 6px solid #f1f1f1;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 20%;
+    padding: 1%;
+    margin: 60px;
+    text-align: align;
+}
+.standort{
+    margin: 10%;
+    width: 20px;
+}
+.film{
+    margin: 10%;
+}
+.datum{
+    margin: 10%;
+}
+.zeit{
+    margin: 10%;
+}
+.button{
+    margin: 10%;
+}
+.foregroundrightside{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.7); 
+    color: white;
+    font-weight: bold;
+    border: 6px solid #f1f1f1;
+    border-radius: 30px;
+    position: absolute;
+    top: 57%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width:60%;
+    padding: 1%;
+    text-align: align;
+    max-height: 900px;   
+}
+.imageAndText{
+    .image{
+        float:left;
+        min-height: 300px;
+        width:200px;
+        overflow:hidden;
+        margin-right: 1%;
+        img{
+            width: 100%;
+        }
+    }
+    .image:hover{
+        scale: 1.05;
+        filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+        transition: 2s;
+      }
+}
+.buttonWeiter:hover{
+    scale:1.1;
+    filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+    transition: 2s;
+}
+
+.trailer{
+    clear: left;
+}
+.trailer:hover{
+    scale: 1.01;
+    filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+    transition: 2s;
+}

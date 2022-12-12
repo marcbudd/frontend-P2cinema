@@ -1,18 +1,3 @@
-<app-header></app-header>
-
-
-
-<div class="movieview">
-  <div class="container">
-
-    <app-film-card
-      *ngFor="let movie of fs.movies"
-      [title] = movie>
-    </app-film-card>
-  </div>
-
-  <a><app-film-input></app-film-input></a>
-
-</div>
-
-
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<app-header class = appheader></app-header>
+<router-outlet></router-outlet>

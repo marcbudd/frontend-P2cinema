@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'frontend-P2cinema'`, () => {
+  it(`should have as title 'ProjectForTielsch'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('frontend-P2cinema');
+    expect(app.title).toEqual('ProjectForTielsch');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('frontend-P2cinema app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('ProjectForTielsch app is running!');
   });
 });

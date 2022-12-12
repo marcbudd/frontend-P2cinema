@@ -1,12 +1,15 @@
-<!--<header class="header">-->
-<!--  <a class="logo">insert a logo here!!</a>-->
-<!--</header>-->
-
-
-<mat-toolbar class="header">
-  <button mat-icon-button class="icon">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <span>P2Cinema</span>
+<mat-toolbar color="primary" class="matToolbar">
+    <a mat-button class="buttonsHeader" routerLink = "" routerLinkActive="active"><img class = "logo" src = "assets/img/logo.PNG"></a> 
+    
+    <div class="spacer"></div>
+    <a mat-button class="buttonsHeader" routerLink = "programm" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Programm</span></a> 
+    <a mat-button class="buttonsHeader" routerLink = "specials" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Specials</span></a>  
+    <a mat-button class="buttonsHeader" routerLink = "anfahrt"><span>Anfahrt</span></a> 
+    <a mat-button class="buttonsHeader" routerLink = "impressum"><span>Impressum</span></a> 
 </mat-toolbar>
 
+
+<!-- <header>
+    
+    <img class = "logo" src = "assets/img/logo.PNG">
+</header> -->

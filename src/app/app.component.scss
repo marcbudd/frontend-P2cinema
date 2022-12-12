@@ -1,17 +1,8 @@
-.movieview {
-  display: flex;
-  padding-top: 50px;
-
+body{
+    margin: 0;
+    background-color: rgba(0,0,0,0.05);
 }
 
-.container {
-  margin-right: 48px;
-  padding-left: 200px;
-  padding-right: 200px;
-  justify-content: left;
-
-}
-
-a {
-  justify-content: right;
+.appheader{
+    z-index: 9999;
 }
