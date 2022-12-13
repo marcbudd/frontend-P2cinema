@@ -3,3 +3,26 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height:5px;
+    background: none;
+
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+    max-height: 20%; 
+    height: 20%;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #e91e63;
+    border-radius: 100px;
+    padding-bottom: 40px;
+
+  }
