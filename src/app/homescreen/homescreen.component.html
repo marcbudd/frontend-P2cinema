@@ -1,0 +1,35 @@
+<div class = "homescreenBackground"></div>
+<div class = "homescreenForeground">
+    <a mat-button class="buttonTickets" routerLink = "programm" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <span>Jetzt Tickets sichern</span><br/><img class = "homescreenForegroundImg" src="../../assets/img/TicketsHier.png"></a> 
+</div>
+<div class = "homescreenForegroundInformation">
+    <h1>Aktuelles</h1>
+    <div class = "Corona">
+        <h1>Aktuelle Corona Regeln (Stand: 11.12.2022)</h1>
+        <h2>Maskenpflicht</h2>
+        Eine Maskenpflicht ist nicht geltend für:
+        <ul>
+            <li>Geimpfte</li>
+            <li>Genesene</li>
+            <li>Getestete</li>
+        </ul>
+        <h2>Nachweispflicht</h2>
+        Eine Nachweispflichtbesteht weiterhin.
+        <h2>Abstände im Saal</h2>
+        Die Abstände sind aufgehoben.
+        <h2>Lüftung</h2>
+        Es findet eine Lüftung nach jeder Vorstellung statt.
+        <h2>Hygiene</h2>
+        Der Toilettenbereich stellt Desinfektionsmittel-Spender zur Verfügung.
+        <h2>Sympthome</h2>
+        Wenn Sie Corona-Sympthome aufweisen müssen Sie leider auf einen Kinobesuch verzichten.
+    </div>
+</div>
+<div class = "homescreenForegroundFilm">
+    <h1>Filmvorschläge</h1>
+    <div class = "Film">
+        <img routerLink="programm" class = image *ngFor="let film of films" [src] = "film">
+    </div>
+</div>
+

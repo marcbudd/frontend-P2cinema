@@ -1,0 +1,16 @@
+<div class = "specialsBackground"></div>
+<div class="specials"><h1>Specials</h1>
+    <div class="componentsInLoop" *ngFor="let special of datalistSpecials">
+    <div class = "specialname">
+        <h1>{{special.specialname}}</h1>
+    </div>
+    <div>
+    <div class = image>
+        <img src = {{special.source}}>
+    </div>
+    <div class = description>
+        {{special.description}}
+    </div>
+    </div>
+    
+</div>

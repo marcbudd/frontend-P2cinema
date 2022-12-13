@@ -1,0 +1,23 @@
+// header{
+//     box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+//     background-color: black;
+// }
+.matToolbar{
+    .logo{
+        margin-top: 7px;
+        height: 50px;
+        
+    }
+}
+.spacer{
+    flex: 1 1 auto;
+}
+.buttonsHeader:hover{
+    background-color: none;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    scale: 1.1;
+    transition: 1.5s;
+}
