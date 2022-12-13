@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 
 
@@ -24,6 +26,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { SpecialsComponent } from './specials/specials.component';
 import { AnfahrtComponent } from './anfahrt/anfahrt.component';
 import { ImpressumComponent } from './impressum/impressum.component';
+import { EinloggenComponent } from './einloggen/einloggen.component';
+import { RegistrierungComponent } from './registrierung/registrierung.component';
 
 
 @NgModule({
@@ -35,6 +39,8 @@ import { ImpressumComponent } from './impressum/impressum.component';
     SpecialsComponent,
     AnfahrtComponent,
     ImpressumComponent,
+    EinloggenComponent,
+    RegistrierungComponent,
 
   ],
   imports: [
@@ -48,7 +54,9 @@ import { ImpressumComponent } from './impressum/impressum.component';
     MatDatepickerModule,
     MatInputModule,
     MatFormFieldModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatMenuModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
