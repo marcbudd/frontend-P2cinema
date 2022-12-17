@@ -3,7 +3,7 @@
   }
 
 .background{
-    background: linear-gradient(to right, rgba(0,0,0,1) 0.2%, transparent 90%), url(../../assets/img/CinemaBG2.png);
+    background: linear-gradient(to right, rgba(0,0,0,1) 0.2%, transparent 90%), url(../../assets/img/CinemaBg2.png);
     height: 100vh;
     background-position: center center;
     background-repeat: no-repeat;
@@ -11,8 +11,8 @@
 }
 
 .foregroundleftsite{
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.4); 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.4);
     color: white;
     font-weight: bold;
     border: 6px solid #f1f1f1;
@@ -44,8 +44,8 @@
     margin: 10%;
 }
 .foregroundrightside{
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0, 0.7); 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.7);
     color: white;
     font-weight: bold;
     border: 6px solid #f1f1f1;
@@ -58,8 +58,8 @@
     width:60%;
     padding: 1%;
     text-align: align;
-    max-height: 900px; 
-      
+    max-height: 900px;
+
 }
 .imageAndText{
     .image{
