@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     name: Frontend Deployment to GCP Linux VM
-    runs-on: ubtuntu-latest
+    runs-on: ubtuntu-18.04
 
     steps:
       - uses: actions/checkout@v1
