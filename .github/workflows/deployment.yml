@@ -25,7 +25,7 @@ jobs:
 #          npm run build --if-present
 
       - name: copy files to server
-        uses: marcbudd/frontend-P2cinema@main
+        uses: appleboy/ssh-action@master
         with:
           HOST: ${{ secrets.HOST }}
           PORT: ${{ secrets.PORT }}
