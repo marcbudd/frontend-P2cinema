@@ -1,0 +1,39 @@
+name: Frontend Deployment to GCP Linux VM
+
+on:
+  push:
+    branch:
+      - main
+
+jobs:
+  deploy:
+    name: Frontend Deployment to GCP Linux VM
+    runs-on: ubtuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Node 8.10.0
+        uses: actions/setup-node@v1
+        with:
+          node-version: 8.10.0
+
+      - name: npm install and npm run build
+        run:
+          npm install
+          npm run build
+
+      - name: copy files to server
+        uses: marcbudd/frontend-P2cinema@main
+        with:
+          HOST: ${{ secrets.HOST }}
+          PORT: ${{ secrets.PORT }}
+          USERNAME: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          target: ${{ secrets.TARGET }}
+          source: "./dist/*"
+          strip-components: 1 # strip components = 1 to remove the dist folder and only copy the files within it
+
+
+
+
