@@ -20,9 +20,9 @@ jobs:
           node-version: 12.22.9
 
       - name: npm install and npm run build
-        run:
+        run: |
           npm install
-          ng build
+          npm run build
 
       - name: copy files to server
         uses: marcbudd/frontend-P2cinema@main
