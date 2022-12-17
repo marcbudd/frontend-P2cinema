@@ -3,7 +3,7 @@ name: Frontend Deployment to GCP Linux VM
 on:
   push:
     branch:
-      - main
+      -  main
 
 jobs:
   deploy:
