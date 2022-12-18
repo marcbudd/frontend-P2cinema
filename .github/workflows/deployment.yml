@@ -26,11 +26,12 @@ jobs:
 
       - name: copy files to server
         uses: appleboy/ssh-action@v0.1.6
-        with:
+        env:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
+        with:
           target: ${{ secrets.TARGET }}
           source: "./dist/*"
           strip-components: 1 # strip components = 1 to remove the dist folder and only copy the files within it
