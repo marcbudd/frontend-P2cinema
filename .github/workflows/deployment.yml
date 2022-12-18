@@ -12,7 +12,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-#      - uses: google-github-actions/setup-gcloud@main
 
       - name: Node 16.13
         uses: actions/setup-node@v2
