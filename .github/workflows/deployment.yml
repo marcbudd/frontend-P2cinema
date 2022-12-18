@@ -25,12 +25,12 @@ jobs:
           npm run build
 
       - name: copy files to server
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v0.1.6
         with:
-          HOST: ${{ secrets.HOST }}
-          PORT: ${{ secrets.PORT }}
-          USERNAME: ${{ secrets.USERNAME }}
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
           target: ${{ secrets.TARGET }}
           source: "./dist/*"
           strip-components: 1 # strip components = 1 to remove the dist folder and only copy the files within it
