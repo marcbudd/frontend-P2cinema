@@ -19,7 +19,7 @@ jobs:
           node-version: 16.13
 
       - name: npm install and npm run build
-        run:
+        run: |
           npm install
           npm run build
 
@@ -29,10 +29,12 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
+          script: |
+            rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
 #          passphrase: ${{ secrets.PASSPHRASE }}
 #          key: ${{ secrets.PRIVATE_KEY }}
-          port: ${{ secrets.PORT }}
+#          port: ${{ secrets.PORT }}
 #          script: whoami
-          target: ${{ secrets.TARGET }}
-          source: "./dist/*"
-          strip-components: 1 # strip components = 1 to remove the dist folder and only copy the files within it
+#          target: ${{ secrets.TARGET }}
+#          source: "./dist/*"
+#          strip-components: 1 # strip components = 1 to remove the dist folder and only copy the files within it
