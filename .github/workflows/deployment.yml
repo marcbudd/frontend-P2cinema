@@ -30,8 +30,10 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            cd /home/${{ secrets.USERNAME }}/
-            mkdir test
+            cd ${{ secrets.TARGET }}
+            touch test.txt
+#            cd /home/${{ secrets.USERNAME }}/
+#            mkdir test
 #            rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
 #          passphrase: ${{ secrets.PASSPHRASE }}
 #          key: ${{ secrets.PRIVATE_KEY }}
