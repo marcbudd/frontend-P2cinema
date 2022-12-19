@@ -31,4 +31,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           target: ${{ secrets.TARGET }}
           source: "./dist/*"
-          strip_components: 1 # strip components = 1 to remove the dist folder and only copy the files within it
+          strip_components: 2 # strip components = 2 to only copy the files within the dist folder and not the folders themselves
