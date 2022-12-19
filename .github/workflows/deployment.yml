@@ -30,7 +30,8 @@ jobs:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           script: |
-            scp ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
+            rsync -e "ssh" -avz --no-recursive * ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
+#            scp ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
 #            rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
 #            cd ${{ secrets.TARGET }}
 #            touch test.txt
