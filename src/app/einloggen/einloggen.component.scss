@@ -1,0 +1,71 @@
+.homescreenBackground {
+    background-image: url(../../assets/img/Cinema.PNG) ;
+    filter: blur(8px);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .foreground{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.7); 
+    color: white;
+    font-weight: bold;
+    border: 6px solid #f1f1f1;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width:20%;
+    height:60%;
+    padding: 1%;
+    text-align: align;
+    max-height: 70%;   
+    overflow: scroll;
+    img{
+      width:100%;
+    }
+}
+.email{
+  margin-top: 5%;
+  width: 100%;
+}
+.passwort{
+  margin-top: 5%;
+  width: 100%;
+}
+.buttonEinloggen{
+  margin-top: 5%;
+  width: 100%;
+}
+.buttonEinloggen:hover{
+  scale:1.05;
+    filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+    transition: 2s;
+}
+.containerPasswortVergessen{
+  margin-top: 5%;
+  width: 100%;
+}
+.passwortVergessen{
+  color:#f1f1f1;
+}
+.passwortVergessen:hover{
+  color:#e91e63;
+  transition: 1s;
+}
+.containerRegistrieren{
+  margin-top: 1%;
+  width: 100%;
+}
+.registrieren{
+  color:#f1f1f1;
+}
+.registrieren:hover{
+  color:#e91e63;
+  transition: 1s;
+
+}
+

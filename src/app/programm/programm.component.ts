@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -81,11 +82,19 @@ export class ProgrammComponent implements OnInit{
     this.ngOnInit();
   }
   safeSrc: SafeResourceUrl;
-  constructor(private sanitizer: DomSanitizer) { 
+  constructor(private sanitizer: DomSanitizer, private route: Router) { 
     this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl(this.filmTrailerURL);
   }
   ngOnInit(): void {
     this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl(this.filmTrailerURL);
   }
+  // button
+  id: any;
+  
+  gettingID(){
+    //Datenbankabfrage aus Parametern Datum Uhrzeit für id...
+    this.id = 24; //bsp
+
+    this.route.navigate(['/seatreservation',this.id]);  }
 }
 

@@ -29,24 +29,24 @@
     padding: 1%;
     margin: 60px;
     text-align: align;
-    
 }
 .standort{
-    margin: 10%;
-    width: 20px;
+    margin-top: 5%;
+    width:100%;
 }
 .film{
-    margin: 10%;
+    margin-top: 5%;
+    width:100%;
 }
 .datum{
-    margin: 10%;
+    margin-top: 5%;
+    width:100%;
 }
 .zeit{
-    margin: 10%;
+    margin-top: 5%;
+    width:100%;
 }
-.button{
-    margin: 10%;
-}
+
 .foregroundrightside{
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0, 0.7); 
@@ -113,5 +113,9 @@
         overflow: scroll;
 
     }
-    
+  }
+.buttonWeiter{
+    margin-top:5%;
+    width: 100%;
 }
+
