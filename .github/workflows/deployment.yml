@@ -1,5 +1,4 @@
 name: Frontend Deployment to Linux VM
-
 on:
   push:
     branch:
@@ -7,7 +6,7 @@ on:
 
 jobs:
   deploy:
-    name: Frontend Deployment to GCP Linux VM
+    name: Frontend Deployment to Linux VM
     runs-on: ubuntu-latest
 
     steps:
