@@ -1,5 +1,4 @@
 name: Frontend Deployment to Linux VM
-
 on:
   push:
     branch:
