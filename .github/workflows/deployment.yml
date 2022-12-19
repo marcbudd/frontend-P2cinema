@@ -24,13 +24,17 @@ jobs:
           npm run build
 
       - name: copy files to server
-        uses: appleboy/ssh-action@v0.1.6
+        uses: appleboy/scp-action@master
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-          script: |
-            rsync -e "ssh" -avz --no-recursive * ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
+          target: ${{ secrets.TARGET }}
+          source: "./dist/*"
+          strip-components: 1 # strip components = 1 to remove the dist folder and only copy the files within it
+
+#          script: |
+#            rsync -e "ssh" -avz --no-recursive * ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
 #            scp ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
 #            rsync -avz -e "ssh -o StrictHostKeyChecking=no" ./dist/* ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET }}
 #            cd ${{ secrets.TARGET }}
