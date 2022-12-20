@@ -18,7 +18,7 @@ const routes: Routes = [
 {path: 'impressum', component: ImpressumComponent},
 {path: 'einloggen', component: EinloggenComponent},
 {path: 'registrieren', component: RegistrierenComponent},
-{path: 'seatreservation/:id', component: SeatreservationComponent}
+{path: 'seatreservation/:id', component: SeatreservationComponent},
 {path: 'registrierung', component: RegistrierungComponent},
 ];
 
