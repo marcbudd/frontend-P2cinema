@@ -11,6 +11,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenu, MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 
 
 import { AppComponent } from './app.component';
@@ -26,6 +28,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { EinloggenComponent } from './einloggen/einloggen.component';
 import { RegistrierenComponent } from './registrieren/registrieren.component';
 import { SeatreservationComponent } from './seatreservation/seatreservation.component';
+import { RegistrierungComponent } from './registrierung/registrierung.component';
 
 
 @NgModule({
@@ -57,6 +60,7 @@ import { SeatreservationComponent } from './seatreservation/seatreservation.comp
     MatNativeDateModule,
     MatMenuModule,
     MatIconModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

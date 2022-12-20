@@ -7,6 +7,7 @@ import { ImpressumComponent } from './impressum/impressum.component';
 import { ProgrammComponent } from './programm/programm.component';
 import { RegistrierenComponent } from './registrieren/registrieren.component';
 import { SeatreservationComponent } from './seatreservation/seatreservation.component';
+import { RegistrierungComponent } from './registrierung/registrierung.component';
 import { SpecialsComponent } from './specials/specials.component';
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
 {path: 'einloggen', component: EinloggenComponent},
 {path: 'registrieren', component: RegistrierenComponent},
 {path: 'seatreservation/:id', component: SeatreservationComponent}
+{path: 'registrierung', component: RegistrierungComponent},
 ];
 
 @NgModule({

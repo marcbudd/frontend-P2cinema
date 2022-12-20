@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-einloggen',
   templateUrl: './einloggen.component.html',
   styleUrls: ['./einloggen.component.scss']
 })
 export class EinloggenComponent {
+
     //Email
     emailInsert: any;
     email = new FormControl('', [Validators.required, Validators.email]);
@@ -27,5 +29,5 @@ export class EinloggenComponent {
       return null
     }
   }
-  
+
 }

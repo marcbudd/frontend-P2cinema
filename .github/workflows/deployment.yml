@@ -1,0 +1,33 @@
+name: Frontend Deployment to Linux VM
+on:
+  push:
+    branch:
+      -  main
+
+jobs:
+  deploy:
+    name: Frontend Deployment to Linux VM
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Node 16.13
+        uses: actions/setup-node@v2
+        with:
+          node-version: 16.13
+
+      - name: npm install and npm run build
+        run: |
+          npm install
+          npm run build
+
+      - name: copy files to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          target: ${{ secrets.TARGET }}
+          source: "./dist/*"
+          strip_components: 2 # strip components = 2 to only copy the files within the dist folder and not the folders themselves
