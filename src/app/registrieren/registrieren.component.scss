@@ -1,0 +1,89 @@
+.homescreenBackground {
+    background-image: url(../../assets/img/Cinema.PNG) ;
+    filter: blur(8px);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .foregroundRightSide{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.7); 
+    color: white;
+    font-weight: bold;
+    border: 6px solid #f1f1f1;
+    border-radius: 30px;
+    position: absolute;
+    top: 57%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width:60%;
+    padding: 1%;
+    text-align: align;
+    max-height: 70%;   
+    overflow: scroll;
+}
+.foregroundLeftSide{
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.7); 
+    color: white;
+    font-weight: bold;
+    border: 6px solid #f1f1f1;
+    border-radius: 30px;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-height: 550px;
+    min-height: 550px;
+    max-width: 350px;
+    min-width: 350px;
+    padding: 1%;
+    margin: 60px;
+    text-align: align;   
+}
+@media(max-width:1195px){
+    .foregroundRightSide{
+        margin-top: 10%;
+        top: 76%;
+        left: 50%;
+        width:90%;
+        max-height: 30%;   
+    }
+    .foregroundLeftSide{
+        top: 27%;
+        left: 38%;
+        min-height: 10%;
+        max-height: 40%;        
+        width: 90%;
+        overflow: scroll;
+
+    }   
+}
+.vorname{
+    margin-top: 5%;
+    width: 100%;
+}
+.nachname{
+    margin-top: 5%;
+    width: 100%
+}
+.email{
+    margin-top: 5%;
+    width: 100%;
+}
+.passwort{
+    margin-top: 5%;
+    width: 100%;
+}
+.buttonRegistrieren{
+    margin-top: 5%;
+    width: 100%;
+}
+.buttonRegistrieren:hover{
+    scale:1.05;
+    filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+    transition: 2s;
+}

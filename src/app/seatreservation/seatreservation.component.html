@@ -1,0 +1,68 @@
+<div class = "background"></div>
+<div class ="legend">
+    <h1>Legende</h1>
+    <div class="componentsInLoop" *ngFor="let legenditem of legenditems">
+        <div><h2>{{legenditem.itemdescription}}:</h2></div>
+        <div><img class="legendimages" src="{{legenditem.img}}"></div>
+    </div>
+</div>
+<div class ="selectedSeats">
+    <h1>Ausgewählte Sitze/ Preis</h1>
+    <div class = selectAusgewählterSitz>
+        <mat-form-field appearance="fill" class = selectAusgewählterSitz>
+            <mat-label>Ausgewählte Sitze</mat-label>
+            <mat-select [(ngModel)] = "selectedSitz">
+            <mat-option *ngFor="let row of rows" [disabled]="!row.selected" value = "Reihe: {{row.row}} Sitz: {{row.seatnumber}} ({{row.seat}})">
+            Reihe: {{row.row}} Sitz: {{row.seatnumber}} ({{row.seat}})
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class = selectausgewählterTarif>
+        <mat-form-field appearance="fill" class = selectausgewählterTarif>
+            <mat-label>Tarif</mat-label>
+            <mat-select [(ngModel)] = "selectedTarif" >
+            <mat-option *ngFor="let tarif of tarife" [value]="tarif.tarif">
+                {{tarif.tarif}}
+            </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div class = button>
+        <button class = buttonAendern mat-raised-button color="primary" (click)="tarifaenderung()" (click)="gesamtpreisberechnung()" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Änderung Bestätigen</span></button>
+    </div>
+<br/>
+    <div class="completelisting">
+        Ausgewählte Sitze
+        <ul class="listing">
+            <div *ngFor="let row of rows">
+                <li *ngIf="row.selected">Reihe: {{row.row}} Sitz: {{row.seatnumber}} ({{row.seat}}) {{row.tarif}} {{row.gueltigerPreis}}$</li>
+            </div>
+        </ul>
+    </div>
+    <div class = button>
+        <button class = buttonKaufen mat-raised-button color="primary"  routerLinkActive="active" ariaCurrentWhenActive="page"><span>Kaufen {{gesamtpreis}}$</span></button>
+    </div>
+</div>
+
+
+
+<div class="bookingRoom">
+    <div class="containerCanvas" >
+    </div>
+    <div class="row" *ngFor="let seat of rows" [style.width.%]="gettingSeatWidth(seat.Person)" [style.height.%]="Breite1Person">
+        <a><img class="seatimages" [class]="classnameForSeat(seat.booked)" src="{{seat.img}}" (click)="seat.selected = clickOnBookable(seat)" (click)="gesamtpreisberechnung()" [ngClass]="seat.selected ? 'seatSelected' : 'nothing'"/></a>     
+    </div>
+</div>
+
+
+
+<!-- <div class = foreground>
+    <div class="seatingrows" *ngFor="let seat of sitzplan">
+        <div class="{{seat.seat}}" [style.width.%]="gettingSeatWidth(seat.Person,widthSingleSeat)" [style.width.%]="gettingSeatWidth(seat.Person,widthSingleSeat)">
+            <img src = {{seat.img}}>
+        </div>
+
+    </div>
+    
+</div> -->

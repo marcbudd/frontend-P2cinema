@@ -1,0 +1,64 @@
+<div class = "homescreenBackground"></div>
+<div class = Foreground>
+  <div class = foregroundLeftSide>
+    <div class = vorname>
+      <!-- vorname -->
+      <mat-form-field appearance="fill" class="vorname">
+        <mat-label>Vorname</mat-label>
+        <input matInput placeholder="Oscar" [formControl]="vorname" required ngModel="{{vornameInsert}}">
+        <mat-error *ngIf="vorname.invalid">{{getErrorMessageVorname()}}</mat-error>
+      </mat-form-field>
+    </div>
+    <div class = nachname>
+<!-- nachname -->
+        <mat-form-field appearance="fill" class="nachname">
+          <mat-label>Nachname</mat-label>
+          <input matInput placeholder="Cinema" [formControl]="nachname" required ngModel="{{nachnameInsert}}">
+          <mat-error *ngIf="nachname.invalid">{{getErrorMessageNachname()}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div class = Email>
+        <!-- e-mail -->
+        <mat-form-field appearance="fill" class="email">
+          <mat-label>E-Mail</mat-label>
+          <input matInput placeholder="OacarCinema@BestCinema.com" [formControl]="email" required ngModel="{{emailInsert}}">
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div class = Passwort>
+      <!-- password -->
+        <mat-form-field appearance="fill" class="passwort">
+          <mat-label>Passwort</mat-label>
+          <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required ngModel="{{passwortInsert}}">
+          <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+        </mat-form-field>
+    </div>
+    <div>
+      <div class = button>
+        <button class = buttonRegistrieren mat-raised-button color="primary" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Registrieren</span></button>
+      </div>
+    </div>
+  </div>
+  <div class = foregroundRightSide>
+    <h1>Genieße alle Vorteile einer Registrierung</h1>
+    <h2>Einfach E-Ticket nutzen</h2>
+    <ul>
+      <li>Durch das E-Ticket nie mehr in der Kassenwarteschlange stehen</li>
+      <li>Vorzeigen und direkt in den Film</li>
+      <li>Sei schnell und wähle online deinen Lieblingsplatz aus</li>
+    </ul>
+    <h2>Abgestimmte Inhalte</h2>
+    <ul>
+      <li>Bekomme Filmvorschläge angezeigt, welche auf dich abgestimmt sind</li>
+    </ul>
+    <h2>Bewertungsfunktion</h2>
+    <ul>
+      <li>Werde zum echten Filmkritiker durch das bewerten von Filmen und dem verfassen von Kommentaren</li>
+    </ul>
+    <h1>Sei Teil von etwas ganz GROßEM</h1>
+    <h1>Sei Teil der Community</h1>
+    </div>
+</div>

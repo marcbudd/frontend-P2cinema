@@ -22,27 +22,31 @@
     left: 15%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    width: 20%;
+    max-height: 550px;
+    min-height: 550px;
+    max-width: 350px;
+    min-width: 350px;
     padding: 1%;
     margin: 60px;
     text-align: align;
 }
 .standort{
-    margin: 10%;
-    width: 20px;
+    margin-top: 5%;
+    width:100%;
 }
 .film{
-    margin: 10%;
+    margin-top: 5%;
+    width:100%;
 }
 .datum{
-    margin: 10%;
+    margin-top: 5%;
+    width:100%;
 }
 .zeit{
-    margin: 10%;
+    margin-top: 5%;
+    width:100%;
 }
-.button{
-    margin: 10%;
-}
+
 .foregroundrightside{
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0, 0.7);
@@ -58,8 +62,9 @@
     width:60%;
     padding: 1%;
     text-align: align;
+    max-height: 70%;   
+    overflow: scroll;
     max-height: 900px;
-
 }
 .imageAndText{
     .image{
@@ -91,4 +96,26 @@
     scale: 1.01;
     filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
     transition: 2s;
+}
+
+  @media(max-width:1195px){
+    .foregroundrightside{
+        top: 76%;
+        left: 50%;
+        width:90%;
+        max-height: 30%;   
+    }
+    .foregroundleftsite{
+        top: 27%;
+        left: 45%;
+        min-height: 10%;
+        max-height: 40%;        
+        width: 90%;
+        overflow: scroll;
+
+    }
+  }
+.buttonWeiter{
+    margin-top:5%;
+    width: 100%;
 }

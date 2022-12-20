@@ -13,7 +13,29 @@
     flex: 1 1 auto;
 }
 .buttonsHeader:hover{
-    background-color: none;
+    background-color: rgba(0,0,0, 0.7);
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    scale: 1.1;
+    transition: 1.5s;
+}
+.buttonsHeaderHome{
+    background-color: rgba(0,0,0, 0.7); 
+    background-size: auto;
+}
+.buttonsHeaderHome:hover{
+    background-color: rgba(0,0,0, 0.7);
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    outline:none;
+    scale: 1.1;
+    transition: 1.5s;
+}
+.buttonsHeaderMenu:hover{
+    background-color: rgba(0,0,0, 0.7);
     background-repeat: no-repeat;
     border: none;
     cursor:pointer;

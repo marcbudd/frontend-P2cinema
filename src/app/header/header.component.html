@@ -1,4 +1,22 @@
 <mat-toolbar color="primary" class="matToolbar">
+    <a mat-button class="buttonsHeader" class="buttonsHeaderHome" routerLink = "" routerLinkActive="active"><img class = "logo" src = "assets/img/logoTransparent.png"></a> 
+    
+    <div class="spacer"></div>
+    <a mat-button class="buttonsHeader" routerLink = "programm" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Programm</span> <mat-icon>play_circle_outline</mat-icon></a> 
+    <a mat-button class="buttonsHeader" routerLink = "specials" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Specials</span> <mat-icon>card_giftcard</mat-icon></a>  
+    <a mat-button class="buttonsHeader" routerLink = "anfahrt"><span>Anfahrt & Kontakt</span> <mat-icon>contact_support</mat-icon></a> 
+    <a mat-button class="buttonsHeader" routerLink = "impressum"><span>Impressum</span> <mat-icon>class</mat-icon></a> 
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="buttonsHeaderMenu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" mat-button>
+        <button mat-menu-item routerLink = "einloggen" class="menuItem">
+          <span>Einloggen</span>
+        </button>
+        <button mat-menu-item routerLink = "registrieren" class="menuItem">
+          <span>Registrieren</span>
+
     <a mat-button class="buttonsHeader" routerLink = "" routerLinkActive="active"><img class = "logo" src = "assets/img/logo.png"></a> 
     
     <div class="spacer"></div>
@@ -21,6 +39,5 @@
 
 
 <!-- <header>
-    
     <img class = "logo" src = "assets/img/logo.PNG">
 </header> -->

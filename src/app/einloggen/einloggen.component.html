@@ -1,1 +1,36 @@
-<p>einloggen works!</p>
+<div class = "homescreenBackground"></div>
+<div class = "foreground">
+  <div class="lockedimg">
+    <img class = "logolocked" src = "assets/img/logoLocked.png">
+  </div>
+  <div class = Email>
+    <!-- e-mail -->
+    <mat-form-field appearance="fill" class="email">
+      <mat-label>E-Mail</mat-label>
+      <input matInput placeholder="OacarCinema@BestCinema.com" [formControl]="email" required ngModel="{{emailInsert}}">
+      <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+    </mat-form-field>
+  </div>
+  <div class = Passwort>
+  <!-- password -->
+    <mat-form-field appearance="fill" class="passwort">
+      <mat-label>Passwort</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required ngModel="{{passwortInsert}}">
+      <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+  <div>
+    <div class = button>
+      <button class = buttonEinloggen mat-raised-button color="primary"  routerLinkActive="active" ariaCurrentWhenActive="page"><span>Einloggen</span></button>
+    </div>
+  </div>
+  <div class="containerPasswortVergessen">
+    <a class="passwortVergessen" routerLink="/passwortVergessen">Passwort vergessen?</a>
+  </div>
+  <div class="containerRegistrieren">
+    <a class="registrieren" routerLink="/registrieren">Registrieren</a>
+  </div>
+</div>
