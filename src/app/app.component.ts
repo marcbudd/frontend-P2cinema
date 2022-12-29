@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
 
 
 @Component({
@@ -8,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend-P2Cinema';
+
+  constructor(private http: HttpClient) {
+  }
+
 }

@@ -11,6 +11,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenu, MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
+import {HttpClientModule} from "@angular/common/http";
 
 
 import { AppComponent } from './app.component';
@@ -41,6 +42,7 @@ import { RegistrierungComponent } from './registrierung/registrierung.component'
     EinloggenComponent,
     RegistrierenComponent,
     SeatreservationComponent,
+    RegistrierungComponent
 
   ],
   imports: [
@@ -58,7 +60,7 @@ import { RegistrierungComponent } from './registrierung/registrierung.component'
     MatNativeDateModule,
     MatMenuModule,
     MatIconModule,
-    MatIconModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
