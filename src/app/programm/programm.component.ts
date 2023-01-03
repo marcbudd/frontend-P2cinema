@@ -17,18 +17,18 @@ export class ProgrammComponent implements OnInit{
   setFilms(){
     if(this.selectedCity != null){
       for(let i of this.existCity){
-       if(this.selectedCity == i){
-         this.films = ["Datenbankzugriff","nötig","von Stadt asugehend","AvatarTheWayOfWater"];
+        if(this.selectedCity == i){
+          this.films = ["Datenbankzugriff","nötig","von Stadt asugehend","AvatarTheWayOfWater"];
         }
       }
       this.disabledFilm = false;
     }
   }
-  // Datepicker 
+  // Datepicker
   // Get Dates From Database
-  
+
   disabledDatepicker = true;
-  minDate = new Date(2022,12,12) ; 
+  minDate = new Date(2022,12,12) ;
   maxDate = new Date(2022,12,20);
   DatesToDisable = [new Date(2022,18,12),new Date(2022,14,12)]
   myFilter = (d: Date | null): boolean => {
@@ -38,7 +38,7 @@ export class ProgrammComponent implements OnInit{
   };
   // https://stackoverflow.com/questions/60043597/how-to-disable-angular-material-datepicker-dates-from-an-array-of-dates
   selectedDate!: Date;
-  
+
   proofDisableDatepicker(){
     if(this.selectedFilm != null && this.selectedCity != null){
       this.disabledDatepicker = false;
@@ -58,7 +58,7 @@ export class ProgrammComponent implements OnInit{
   disabledButton = true;
   proofDisableButton(){
     if((this.selectedTime && this.selectedCity && this.selectedFilm && this.selectedDate) != null){
-        this.disabledButton = false;
+      this.disabledButton = false;
     }
   }
   //disabled foreground right
@@ -82,7 +82,7 @@ export class ProgrammComponent implements OnInit{
     this.ngOnInit();
   }
   safeSrc: SafeResourceUrl;
-  constructor(private sanitizer: DomSanitizer, private route: Router) { 
+  constructor(private sanitizer: DomSanitizer, private route: Router) {
     this.safeSrc =  this.sanitizer.bypassSecurityTrustResourceUrl(this.filmTrailerURL);
   }
   ngOnInit(): void {
@@ -90,11 +90,10 @@ export class ProgrammComponent implements OnInit{
   }
   // button
   id: any;
-  
+
   gettingID(){
     //Datenbankabfrage aus Parametern Datum Uhrzeit für id...
     this.id = 24; //bsp
 
     this.route.navigate(['/seatreservation',this.id]);  }
 }
-

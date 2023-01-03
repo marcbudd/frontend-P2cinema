@@ -7,9 +7,8 @@
   background-size: cover;
 }
 .bookingRoom{
-  overflow: scroll;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0, 0.7); 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.7);
   color: white;
   font-weight: bold;
   border: 6px solid #f1f1f1;
@@ -28,10 +27,12 @@
   float: left;
 }
 .seatimages{
-  width: 100%; 
-  height: 100%;
+  width: 80%;
+  height: 80%;
   object-fit: cover;
   border-radius: 28%;
+  margin-left: 8px;
+  margin-top: 10%;
 }
 .seatBooked{
   background-color: red;
@@ -48,20 +49,19 @@
   background-color: blue;
 }
 .containerCanvas{
-  margin-top: 5%;
+  margin-top: 45%;
   margin-bottom: 5%;
   width: 60%;
-  height: 100px;
+  height: 50px;
   left:20%;
-  border-radius: 30px;
+  border-radius: 25px;
   position: relative;
   background-color: #f1f1f1;
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.5);
 }
 .legend{
-  overflow: scroll;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0, 0.7); 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.7);
   color: white;
   font-weight: bold;
   border: 6px solid #f1f1f1;
@@ -71,18 +71,23 @@
   left: 17%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width:30%;
-  max-width: 30%;
+  width:50%;
+  max-width: 31%;
   max-height: 20%;
-  text-align: center;
+  display: flex;
+  padding-left: 5px;
+  padding-top: 5px;
 }
 .legendimages{
   height:50px;
+  margin-top: 5px;
+  margin-left: 5px;
+
 }
 .selectedSeats{
   overflow: scroll;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0, 0.7); 
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.7);
   color: white;
   font-weight: bold;
   border: 6px solid #f1f1f1;
@@ -92,11 +97,14 @@
   left: 17%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  width:30%;
-  max-width: 30%;
+  width:50%;
+  max-width: 31%;
   max-height: 56.5%;
   min-height: 56.5%;
   text-align: center;
+  margin-right: 5px;
+  margin-top: 20px;
+  padding-top: 10px;
 }
 
 .listing{
@@ -122,42 +130,28 @@
   filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
   transition: 2s;
 }
+.buttonKaufen:hover{
+  scale:1.1;
+  filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+  transition: 2s;
+}
 
-
-
-// .foreground{
-//   background-color: rgb(0,0,0); 
-//   background-color: rgba(0,0,0, 0.7); 
-//   color: white;
-//   font-weight: bold;
-//   border: 6px solid #f1f1f1;
-//   border-radius: 30px;
-//   position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   z-index: 1;
-//   width:80%;
-//   height:60%;
-//   padding: 1%;
-//   max-height: 70%;   
-//   overflow: scroll;
-//   img{
-//     height:100%;
-//     width:100%;
-    
-//     max-height: 100px;
-//     border-radius: 25px;
-//   }
-// }
-// .seats:hover{
-//   scale: 1.05;
-//   transition: 1s;
-  
-//   filter: drop-shadow(5px 5px 5px rgb(255, 255, 255));
-// }
-
-
+.heading {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-left: 190px;
+  position: absolute;
+}
+.componentsInLoop{
+  float: left;
+  margin-top: 3%;
+  padding:10px;
+  img{
+    max-height: 250px;
+    max-width: 500px;
+    overflow:hidden;
+  }
+}
 
 
 
