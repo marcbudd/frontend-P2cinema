@@ -52,25 +52,36 @@
   </div>
 
   <div class = foregroundrightside [hidden] = "disabledForegroundRight">
+    <h1>{{filmName}}</h1>
     <div class = imageAndText>
       <div class = image>
         <img src="{{filmPicture}}">
       </div>
       <div class = onlyText>
-        <div class = generalinformation>
-          <p>{{filmclassification}}</p>
-        </div>
+
         <div class = description>
+          <p>{{filmInformation}}</p>
+        </div>
+        <div class = genre>
+          <p>Genre: {{filmGenre}}</p>
+        </div>
+        <div class = actors>
           <p>
-            {{filmInformation}}
+            Schauspieler: {{filmActors}}
+          </p>
+        </div>
+        <div class = imageFSK>
+          <p>
+            <img src="{{filmFSK}}">
           </p>
         </div>
       </div>
     </div>
     <div class = trailer>
+      <h2>Trailer</h2>
       <iframe
-        width="560"
-        height="315"
+        width="480"
+        height="235"
         [src]="safeSrc"
         title="YouTube video player"
         frameborder="0"

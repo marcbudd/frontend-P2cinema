@@ -69,15 +69,21 @@ export class ProgrammComponent implements OnInit{
     }
   }
 
+  filmName = "";
+  filmGenre = "";
+  filmFSK = "";
+  filmActors = "";
   filmPicture = "";
-  filmclassification = "";
   filmInformation = "";
   filmTrailerURL = "";
   setInformationForegroundRight(){
     //Datenbankabfrage
     this.filmPicture = "assets/img/Filmcover.jpg";
-    this.filmclassification = "Genres Science Fiction, Abenteuer, Action & FantasyIm Verleih bei 20th Century Studios";
+    this.filmName = "AVATAR 2";
+    this.filmGenre = "Science Fiction, Abenteuer, Action & Fantasy";
+    this.filmActors = "Sam Worthington, Zoe Zaldana, Stephen Lang, Sigourney Weaver, Vin Diesel";
     this.filmInformation = "AVATAR 2 spielt mehr als ein Jahrzehnt nach den Ereignissen des ersten Films und erzählt die spannende Geschichte der Familie Sully (Jake, Neytiri und ihre Kinder): von dem Ärger, der sie verfolgt und was sie auf sich nehmen, um einander zu beschützen; sowie die dramatischen Erlebnisse und die Kämpfe, die sie führen, um zu überleben.";
+    this.filmFSK = "assets/img/FSK.png";
     this.filmTrailerURL = "https://www.youtube-nocookie.com/embed/HHRRi0Hh6fM";
     this.ngOnInit();
   }
