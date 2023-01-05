@@ -9,6 +9,11 @@ import { RegistrierenComponent } from './registrieren/registrieren.component';
 import { SeatreservationComponent } from './seatreservation/seatreservation.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
 import { SpecialsComponent } from './specials/specials.component';
+import {AdminpageComponent} from "./adminpage/adminpage.component";
+import {KundendatenComponent} from "./kundendaten/kundendaten.component";
+import {FilmaddComponent} from "./filmadd/filmadd.component";
+import {KaufenComponent} from "./kaufen/kaufen.component";
+import {CodeComponent} from "./code/code.component";
 
 const routes: Routes = [
 {path: '', component: HomescreenComponent},
@@ -20,6 +25,12 @@ const routes: Routes = [
 {path: 'registrieren', component: RegistrierenComponent},
 {path: 'seatreservation/:id', component: SeatreservationComponent},
 {path: 'registrierung', component: RegistrierungComponent},
+  {path: 'homescreen', component: HomescreenComponent},
+  {path: 'adminpage', component: AdminpageComponent},
+  {path: 'kundendaten', component: KundendatenComponent},
+  {path: 'filmadd', component: FilmaddComponent},
+  {path: 'kaufen', component: KaufenComponent},
+  {path: 'code', component: CodeComponent}
 ];
 
 @NgModule({

@@ -1,35 +1,54 @@
+
 <div class = "homescreenBackground"></div>
 <div class = "homescreenForeground">
-    <a mat-button class="buttonTickets" routerLink = "programm" routerLinkActive="active" ariaCurrentWhenActive="page">
-        <span>Jetzt Tickets sichern</span><br/><img class = "homescreenForegroundImg" src="../../assets/img/TicketsHier.png"></a>
+  <a mat-button class="buttonTickets" routerLink = "/programm" routerLinkActive="active" ariaCurrentWhenActive="page">
+    <span>Jetzt Tickets sichern</span><br/><img class = "homescreenForegroundImg" src="../../assets/img/TicketsHier.png"></a>
 </div>
 <div class = "homescreenForegroundInformation">
-    <h1>Aktuelles</h1>
-    <div class = "Corona">
-        <h1>Aktuelle Corona Regeln (Stand: 11.12.2022)</h1>
-        <h2>Maskenpflicht</h2>
-        Eine Maskenpflicht ist nicht geltend für:
-        <ul>
-            <li>Geimpfte</li>
-            <li>Genesene</li>
-            <li>Getestete</li>
-        </ul>
-        <h2>Nachweispflicht</h2>
-        Eine Nachweispflicht besteht weiterhin.
-        <h2>Abstände im Saal</h2>
-        Die Abständeregelungen sind aufgehoben.
-        <h2>Lüftung</h2>
-        Es findet eine Lüftung der Kinosäle nach jeder Vorstellung statt.
-        <h2>Hygiene</h2>
-        Der Toilettenbereich stellt Desinfektionsmittel zur Verfügung.
-        <h2>Symptome</h2>
-        Wenn Sie Corona-Symptome aufweisen, müssen Sie leider auf einen Kinobesuch verzichten.
-    </div>
+  <div class = "Corona">
+    <h1>Aktuelle Corona Regeln (Stand: 11.12.2022)</h1>
+    <div class = "Maskenpflicht">
+      <u>Maskenpflicht </u></div>
+    <br>
+    Eine Maskenpflicht ist nicht geltend für:
+    <ul>
+      <a>Geimpfte</a>
+      <br>
+      <a>Genesene</a>
+      <br>
+      <a>Getestete</a>
+    </ul>
+    <br>
+    <div class = "Nachweispflicht">
+      <u>Nachweispflicht</u></div>
+    <br>
+    Eine Nachweispflicht besteht weiterhin.
+    <br>
+    <br>
+    <div class = "Abstände">
+      <u>Abstände im Saal</u></div>
+    <br>
+    Die Abstandsregelungen sind aufgehoben.
+    <br>
+    <br>
+    <div class = "Lüftung">
+      <u>Lüftung</u></div>
+    <br>
+    Es findet eine Lüftung der Kinosäle nach jeder Vorstellung statt.
+    <br>
+    <br>
+    <div class = "Symptome">
+      <u>Symptome</u></div>
+    <br>
+    Wenn Sie Corona-Symptome aufweisen, müssen Sie leider auf einen Kinobesuch verzichten.
+    <br>
+    <br>
+
+  </div>
 </div>
 <div class = "homescreenForegroundFilm">
-    <h1>Filmvorschläge</h1>
-    <div class = "Film">
-        <img routerLink="programm" class = image *ngFor="let film of films" [src] = "film">
-    </div>
+  <h1>Filmvorschläge 🎬</h1>
+  <div class = "Film">
+    <img routerLink="programm" class = image *ngFor="let film of films" [src] = "film">
+  </div>
 </div>
-

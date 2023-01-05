@@ -1,23 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DomSanitizer} from '@angular/platform-browser';
-import { Router } from '@angular/router';
-
-
 
 @Component({
-  selector: 'app-seatreservation',
-  templateUrl: './seatreservation.component.html',
-  styleUrls: ['./seatreservation.component.scss']
+  selector: 'app-code',
+  templateUrl: './code.component.html',
+  styleUrls: ['./code.component.scss']
 })
-export class SeatreservationComponent{
+export class CodeComponent {
   constructor(private sanitizer: DomSanitizer, private route: ActivatedRoute){
   }
-  ngOnInit() : void{
-    this.route.snapshot.paramMap.get('id');
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.rauminforamtionen();
-  }
+
   id:any;
   sitzanzahlproReihe:any;
   Breite1Person:any;
@@ -56,84 +49,4 @@ export class SeatreservationComponent{
     {row: 3, seatnumber:6,seat: "singleseat",booked: false, id: 24, img:"assets/img/singleSeat.png",Person:1,selected:false, tarif:"Normal",normal: 5,rabatt: 3, gueltigerPreis: 5},
     {row: 3, seatnumber:7,seat: "singleseat",booked: false, id: 25, img:"assets/img/singleSeat.png",Person:1,selected:false, tarif:"Normal",normal: 5,rabatt: 3, gueltigerPreis: 5}
   ];
-  legenditems = [
-    {img:"assets/img/singleSeat.png",itemdescription:"Einzelsitz"},
-    {img:"assets/img/pairseat.png",itemdescription:"Paarsitz"},
-    {img:"assets/img/gebucht.png",itemdescription:"Gebucht"},
-    {img:"assets/img/ausgewählt.png",itemdescription:"Ausgewählt"},
-    {img:"assets/img/verfügbar.png",itemdescription:"Verfügbar"}
-  ];
-
-
-  rauminforamtionen(){
-    //Datenabfrage
-    this.sitzanzahlproReihe = 9;
-    this.Breite1Person=100/this.sitzanzahlproReihe;
-  }
-  gettingSeatWidth(Person:any){
-    return (Person*this.Breite1Person);
-  }
-  classnameForSeat(booked:any){
-    if(booked){
-      return "seatBooked"
-    }else{
-      return "seatNotBooked"
-    }
-  }
-  selectedSeats:any;
-  clickOnBookable(seat:any){
-    if(seat.booked){
-      return seat.selectedSeat;;
-    }else{
-      if(true){//seat selectable question to backend
-        seat.selected = !seat.selected;
-        if(seat.selected){
-          //speichern das seat selected ist
-
-        }else{
-          // seat entfernen
-        }
-        return seat.selected;
-        // if(seat.selected){
-        //   return seat.selectedSeat;
-        // }else{
-        //   return !seat.selectedSeat;
-        // }
-      }else{
-        return null; //return not selectable
-      }
-    }
-  }
-
-  tarifaenderung(){
-    if((this.selectedTarif && this.selectedSitz)!= null){
-      for(let i = 0; i < this.rows.length ; i++) {
-        let tempProofText ="Reihe: "+ this.rows[i].row + " Sitz: " + this.rows[i].seatnumber +" ("+this.rows[i].seat+")";
-        if(tempProofText == this.selectedSitz){
-          this.rows[i].tarif = this.selectedTarif;
-          if(this.rows[i].tarif == "Normal"){
-            this.rows[i].gueltigerPreis = this.rows[i].normal;
-          }else{
-            this.rows[i].gueltigerPreis = this.rows[i].rabatt;
-          }
-
-        }
-      }
-    }
-  }
-
-  gesamtpreisberechnung(){
-    this.gesamtpreis = 0;
-    for(let i = 0; i < this.rows.length ; i++) {
-      if(this.rows[i].selected){
-        this.gesamtpreis = this.gesamtpreis + this.rows[i].gueltigerPreis
-      }
-    }
-  }
-  disabledButton = true;
-  proofDisableButton(){
-    if((this.selectedSeats) != null){
-      this.disabledButton = false;
-    }
-  }
 }

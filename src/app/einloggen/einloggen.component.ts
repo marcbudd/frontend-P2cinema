@@ -9,15 +9,15 @@ import { FormControl, Validators } from '@angular/forms';
 })
 export class EinloggenComponent {
 
-    //Email
-    emailInsert: any;
-    email = new FormControl('', [Validators.required, Validators.email]);
-    getErrorMessage() {
-      if (this.email.hasError('required')) {
-        return 'E-Mail benötigt';
-      }
-      return this.email.hasError('email') ? 'Not a valid email' : '';
+  //Email
+  emailInsert: any;
+  email = new FormControl('', [Validators.required, Validators.email]);
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'E-Mail benötigt';
     }
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
   //password
   hide = true;
   passwortInsert:any;

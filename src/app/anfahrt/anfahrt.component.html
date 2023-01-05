@@ -1,16 +1,26 @@
 <div class = "anfahrtBackground"></div>
-<div class="anfahrt"><h1>Anfahrt</h1>
-    <div class="componentsInLoop" *ngFor="let cinema of cinemas">
-    <div class = "anfahrtname">
-        <h1>{{cinema.cinemaLocation}}</h1>
-    </div>
-    <div class = "anfahrtkino">
-        <img src = {{ cinema.source }}>
+<div class="anfahrt"><h1>Anfahrt & Kontakt  🚙</h1>
+  <div class="componentsInLoop" *ngFor="let anfahrt of cinemas">
+    <div class = "specialname">
+      <h1>{{anfahrt.cinemaLocation}}</h1>
     </div>
     <div>
-        Adresse:    {{cinema.adresse}} <br/>
-        Telefon:    {{cinema.telefon}} <br/>
-        E-Mail:     {{cinema.email}}
+      <div class = image>
+        <img src = {{anfahrt.source}}>
+      </div>
+      <br>
+      <div class = adresse>
+        {{anfahrt.adresse}}
+      </div>
+      <div class = telefon>
+        {{anfahrt.telefon}}
+      </div>
+      <div class = email>
+        {{anfahrt.email}}
+
+      </div>
     </div>
-    </div>
+    <br>
+    <br>
+  </div>
 </div>

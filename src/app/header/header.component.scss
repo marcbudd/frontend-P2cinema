@@ -1,45 +1,44 @@
-// header{
-//     box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
-//     background-color: black;
-// }
 .matToolbar{
-    .logo{
-        margin-top: 7px;
-        height: 50px;
-        
-    }
+  background-color: hsl(340, 91%, 43%);
+  color: white;
+  .logo{
+    margin-top: 7px;
+    height: 50px;
+
+  }
 }
 .spacer{
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .buttonsHeader:hover{
-    background-color: rgba(0,0,0, 0.7);
-    background-repeat: no-repeat;
-    border: none;
-    cursor:pointer;
-    outline:none;
-    scale: 1.1;
-    transition: 1.5s;
+  background-color: rgba(0,0,0, 0.7);
+  background-repeat: no-repeat;
+  border: none;
+  cursor:pointer;
+  outline:none;
+  scale: 1.1;
+  transition: 1.5s;
 }
 .buttonsHeaderHome{
-    background-color: rgba(0,0,0, 0.7); 
-    background-size: auto;
+  background-color: rgba(0,0,0, 0.3);
+  background-size: auto;
 }
 .buttonsHeaderHome:hover{
-    background-color: rgba(0,0,0, 0.7);
-    background-repeat: no-repeat;
-    border: none;
-    cursor:pointer;
-    outline:none;
-    scale: 1.1;
-    transition: 1.5s;
+  background-color: rgba(0,0,0, 0.7);
+  background-repeat: no-repeat;
+  border: none;
+  cursor:pointer;
+  outline:none;
+  scale: 1.1;
+  transition: 1.5s;
 }
 .buttonsHeaderMenu:hover{
-    background-color: rgba(0,0,0, 0.7);
-    background-repeat: no-repeat;
-    border: none;
-    cursor:pointer;
-    outline:none;
-    scale: 1.1;
-    transition: 1.5s;
+  background-color: rgba(0,0,0, 0.7);
+  background-repeat: no-repeat;
+  border: none;
+  cursor:pointer;
+  outline:none;
+  scale: 1.1;
+  transition: 1.5s;
 }
+

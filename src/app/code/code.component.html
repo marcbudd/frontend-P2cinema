@@ -1,0 +1,12 @@
+<div class = "codeBackground"></div>
+<div class="code"><h1>Wir freuen uns auf deinen Besuch!</h1>
+  <img class="img" src="assets/img/qrcode.jpg">
+  <div class="completelisting">
+
+    <ul class="listing">
+      <div *ngFor="let row of rows">
+        <li *ngIf="row.selected">Reihe: {{row.row}} Sitz: {{row.seatnumber}} ({{row.seat}}) {{row.tarif}} {{row.gueltigerPreis}} €</li>
+      </div>
+    </ul>
+  </div>
+</div>
