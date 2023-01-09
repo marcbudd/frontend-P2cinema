@@ -15,23 +15,27 @@ export class HomescreenComponent {
   }
 
   ngOnInit() {
-    this.getMovies();
+    this.fetchMovies();
   }
 
-  //test HTTP Request from Backend
   movieData: any;
-  getMovies(): void {
 
-    const url = `${environment.backendUrl}/movie`
-    // const url = environment.backendUrl + "/movie"; //alternativ Stringverkettung
+  private fetchMovies(){
+    const url = `${environment.backendUrl}/film`
 
-    this.http.get(url).subscribe(response => {
-      // handle response
-      this.movieData = response;
-      //console.log(response)
-    });
+    this.http.get(url)
+      .subscribe(response => {
+        this.movieData = response;
 
+        console.log(this.movieData);
+        this.films = [];
+        for(let i = 0; i < this.movieData.length; i++){
+          console.log(this.movieData[i].titel);
+          console.log(this.movieData[i].bildLink);
+          this.films.push(this.movieData[i].bildLink);
+        }
 
+      })
   }
 
 

@@ -43,7 +43,7 @@
     </ul>
   </div>
   <div class = button>
-    <button class = buttonKaufen  mat-raised-button color="primary" routerLink="/kaufen" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Kaufen {{gesamtpreis}} €</span></button>
+    <button class = buttonKaufen (click)="kaufenClick()"  mat-raised-button color="primary" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Bestellen {{gesamtpreis}} €</span></button>
   </div>
 </div>
 

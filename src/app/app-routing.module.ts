@@ -14,17 +14,19 @@ import {KundendatenComponent} from "./kundendaten/kundendaten.component";
 import {FilmaddComponent} from "./filmadd/filmadd.component";
 import {KaufenComponent} from "./kaufen/kaufen.component";
 import {CodeComponent} from "./code/code.component";
+import {TicketinfoComponent} from "./ticketinfo/ticketinfo.component";
 
 const routes: Routes = [
-{path: '', component: HomescreenComponent},
-{path: 'programm', component: ProgrammComponent},
-{path: 'specials', component: SpecialsComponent},
-{path: 'anfahrt', component: AnfahrtComponent},
-{path: 'impressum', component: ImpressumComponent},
-{path: 'einloggen', component: EinloggenComponent},
-{path: 'registrieren', component: RegistrierenComponent},
-{path: 'seatreservation/:id', component: SeatreservationComponent},
-{path: 'registrierung', component: RegistrierungComponent},
+  {path: '', component: HomescreenComponent},
+  {path: 'programm', component: ProgrammComponent},
+  {path: 'specials', component: SpecialsComponent},
+  {path: 'anfahrt', component: AnfahrtComponent},
+  {path: 'impressum', component: ImpressumComponent},
+  {path: 'einloggen', component: EinloggenComponent},
+  {path: 'registrieren', component: RegistrierenComponent},
+  {path: 'reservation/:id', component: SeatreservationComponent},
+  {path: 'ticketinfo/:id', component: TicketinfoComponent},
+  {path: 'registrierung', component: RegistrierungComponent},
   {path: 'homescreen', component: HomescreenComponent},
   {path: 'adminpage', component: AdminpageComponent},
   {path: 'kundendaten', component: KundendatenComponent},

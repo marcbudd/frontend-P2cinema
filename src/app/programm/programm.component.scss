@@ -78,9 +78,9 @@
     }
   }
   .image:hover{
-    scale: 1.05;
-    filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
-    transition: 2s;
+    //scale: 1.05;
+    //filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+    //transition: 2s;
   }
 }
 .buttonWeiter:hover{
@@ -93,9 +93,9 @@
   clear: left;
 }
 .trailer:hover{
-  scale: 1.01;
-  filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
-  transition: 2s;
+  //scale: 1.01;
+  //filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+  //transition: 2s;
 }
 
 @media(max-width:1195px){
@@ -183,5 +183,13 @@
     overflow: scroll;
 
   }
+
+}
+
+.youtubeVideo{
+  min-height: 400px;
+  max-height: 235px;
+  min-width: 480px;
+  max-width: 650px;
 }
 
