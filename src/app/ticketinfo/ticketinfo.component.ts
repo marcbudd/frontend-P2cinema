@@ -17,6 +17,14 @@ export class TicketinfoComponent {
   datum: any;
   zeit: any;
 
+  //cinema information
+  kinoName = "";
+  kinoStreet = "";
+  kinoCity = "";
+  kinoPlz = "";
+  kinoNumber = "";
+  saalNumber = "";
+
   //film information
   filmId = "";
   filmName = "";
@@ -56,6 +64,14 @@ export class TicketinfoComponent {
 
       this.datum = this.ticketData.vorstellungsplatzList[0].vorstellung.datum;
       this.zeit = this.ticketData.vorstellungsplatzList[0].vorstellung.zeit;
+
+      //cinema information
+      this.kinoName = this.ticketData.vorstellungsplatzList[0].vorstellung.saal.kino.name;
+      this.kinoStreet = this.ticketData.vorstellungsplatzList[0].vorstellung.saal.kino.strasse;
+      this.kinoCity = this.ticketData.vorstellungsplatzList[0].vorstellung.saal.kino.stadt;
+      this.kinoPlz = this.ticketData.vorstellungsplatzList[0].vorstellung.saal.kino.plz;
+      this.kinoNumber = this.ticketData.vorstellungsplatzList[0].vorstellung.saal.kino.hausnummer;
+      this.saalNumber = this.ticketData.vorstellungsplatzList[0].vorstellung.saal.saalNummer;
     })
   }
 
