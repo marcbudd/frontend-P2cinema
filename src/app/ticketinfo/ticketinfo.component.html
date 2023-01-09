@@ -1,0 +1,21 @@
+<div class="everything">
+  <h1 class="heading">Deine Plätze wurden reserviert!</h1>
+
+  <div>
+    <h2>{{ filmName }}</h2>
+    <a>{{ filmInformation }}</a><br>
+    <img class = image [src] = "filmPicture">
+  </div>
+  <div class="seats">
+    <b>Deine Plätze:</b>
+      <div *ngFor="let seat of vorstellungsplatzList">
+        Reihe {{ seat.sitzplatz.reihe }} Sitz {{ seat.sitzplatz.sitzplatzNummer }}, {{ seat.sitzplatz.sitzplatzkategorie}}: {{seat.preis.preis}}€
+      </div>
+  </div>
+  <div class="preis">
+    Gesamtpreis: {{ gesamtPreis }}€
+  </div>
+  <div class="ticketnummer">
+    Deine Ticketnummer: {{ticketData.id}}
+  </div>
+</div>

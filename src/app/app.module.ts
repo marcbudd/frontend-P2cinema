@@ -33,6 +33,7 @@ import { FilmaddComponent} from "./filmadd/filmadd.component";
 import { KundendatenComponent} from "./kundendaten/kundendaten.component";
 import { KaufenComponent} from "./kaufen/kaufen.component";
 import { CodeComponent} from "./code/code.component";
+import { TicketinfoComponent } from './ticketinfo/ticketinfo.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { CodeComponent} from "./code/code.component";
     FilmaddComponent,
     KundendatenComponent,
     KaufenComponent,
-    CodeComponent
+    CodeComponent,
+    TicketinfoComponent
 
   ],
   imports: [

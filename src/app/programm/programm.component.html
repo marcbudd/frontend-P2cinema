@@ -2,52 +2,78 @@
 </div>
 <div class = foreground>
   <div class = foregroundleftsite>
-    <!-- First Select Button     -->
+    <!-- Select city     -->
     <div class = standort>
       <mat-form-field appearance="fill" class = standort>
         <mat-label>Standort auswählen</mat-label>
-        <mat-select [(ngModel)] = "selectedCity" (selectionChange)="setFilms()" (selectionChange)="proofDisableDatepicker()">
-          <mat-option *ngFor="let city of existCity" [value] = "city">
+        <mat-select [(ngModel)] = "selectedCity" (selectionChange)="setFilms()" (selectionChange)="proofDisableDatepicker()" (selectionChange)="setShowTimes()">
+          <mat-option *ngFor="let city of cities" [value] = "city">
             {{city}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-    <!-- Second Select Button     -->
+    <!-- Select film     -->
     <div class = film>
       <mat-form-field appearance="fill" class = film>
         <mat-label>Film auswählen</mat-label>
-        <mat-select [(ngModel)] = "selectedFilm" (selectionChange)="proofDisableDatepicker()" (selectionChange)="proofDisabledForegroundRight()" (selectionChange)="setInformationForegroundRight()" [disabled]="disabledFilm">
+        <mat-select [(ngModel)] = "selectedFilm" (selectionChange)="proofDisableShow()" (selectionChange)="setShowTimes()" (selectionChange)="proofDisabledForegroundRight()" (selectionChange)="setInformationForegroundRight()" [disabled]="disabledFilm">
           <mat-option *ngFor="let film of films" [value] = "film">
             {{film}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-    <!-- Date Picker     -->
-    <div class = datum>
-      <mat-form-field class="Datepicker" appearance="fill" class = datum>
-        <mat-label>Wähle ein Datum</mat-label>
-        <input matInput [min]="minDate" [max]="maxDate" [matDatepickerFilter]="myFilter" [matDatepicker]="picker" [(ngModel)]="selectedDate" [disabled]="disabledDatepicker" (dateChange)="proofDisableTime()">
-        <mat-hint>MM/DD/YYYY</mat-hint>
-        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-    </div>
-    <!-- zeit auswählen -->
-    <div class = zeit>
-      <mat-form-field appearance="fill" class = zeit>
+
+    <!-- Select time     -->
+    <div class = film>
+      <mat-form-field appearance="fill" class = film>
         <mat-label>Zeit auswählen</mat-label>
-        <mat-select [(ngModel)] = "selectedTime" [disabled]="disabledTime" (selectionChange)="proofDisableButton()">
-          <mat-option *ngFor="let time of times" [value] = "time">
-            {{time}}
+        <mat-select [(ngModel)] = "selectedShow" (selectionChange)="proofDisabledButton()" [disabled]="disabledShow">
+          <mat-option *ngFor="let show of shows" [value] = "show">
+            {{show}}
           </mat-option>
         </mat-select>
       </mat-form-field>
     </div>
+
+    <!-- Select paying method     -->
+    <div class = film>
+      <mat-form-field appearance="fill" class = film>
+        <mat-label>Zahlungsmethode auswählen</mat-label>
+        <mat-select [(ngModel)] = "selectedPayingMethod" [disabled]="disabledPayingMethod">
+          <mat-option *ngFor="let payingMethod of payingMethods" [value] = "payingMethod">
+            {{payingMethod}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <!-- Date Picker     -->
+<!--    <div class = datum>-->
+<!--      <mat-form-field class="Datepicker" appearance="fill" class = datum>-->
+<!--        <mat-label>Wähle ein Datum</mat-label>-->
+<!--        <input matInput [min]="minDate" [max]="maxDate" [matDatepickerFilter]="myFilter" [matDatepicker]="picker" [(ngModel)]="selectedDate" [disabled]="disabledDatepicker" (dateChange)="proofDisableTime()">-->
+<!--        <mat-hint>MM/DD/YYYY</mat-hint>-->
+<!--        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>-->
+<!--        <mat-datepicker #picker></mat-datepicker>-->
+<!--      </mat-form-field>-->
+<!--    </div>-->
+    <!-- Zeit auswählen -->
+<!--    <div class = zeit>-->
+<!--      <mat-form-field appearance="fill" class = zeit>-->
+<!--        <mat-label>Zeit auswählen</mat-label>-->
+<!--        <mat-select [(ngModel)] = "selectedTime" [disabled]="disabledTime" (selectionChange)="proofDisableButton()">-->
+<!--          <mat-option *ngFor="let time of times" [value] = "time">-->
+<!--            {{time}}-->
+<!--          </mat-option>-->
+<!--        </mat-select>-->
+<!--      </mat-form-field>-->
+<!--    </div>-->
+
     <!-- Button weiter -->
     <div class = button>
-      <button class = buttonWeiter mat-raised-button color="primary" [disabled]="disabledButton"  (click)=gettingID()  routerLinkActive="active" ariaCurrentWhenActive="page"><span>Weiter</span></button>
+      <button class = buttonWeiter mat-raised-button color="primary" [disabled]="disabledButton"  (click)=buttonClick()  routerLinkActive="active" ariaCurrentWhenActive="page"><span>Weiter</span></button>
     </div>
   </div>
 
@@ -79,9 +105,9 @@
     </div>
     <div class = trailer>
       <h2>Trailer</h2>
-      <iframe
-        width="480"
-        height="235"
+      <iframe class="youtubeVideo"
+        height=100%
+        width=100%
         [src]="safeSrc"
         title="YouTube video player"
         frameborder="0"

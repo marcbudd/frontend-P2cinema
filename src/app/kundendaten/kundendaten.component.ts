@@ -8,7 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./kundendaten.component.scss']
 })
 export class KundendatenComponent {
-  names =['Klara','Marek','Schwabi','Josi'];
-  images = [];
-  texts = ['2 Jahre alt', 'Gräbt gerne', 'Hamsterradfreak', 'Isst gerne'];
+
 }
