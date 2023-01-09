@@ -14,6 +14,8 @@ export class TicketinfoComponent {
   ticketData: any;
   vorstellungsplatzList: any;
   gesamtPreis: any;
+  datum: any;
+  zeit: any;
 
   //film information
   filmId = "";
@@ -51,6 +53,9 @@ export class TicketinfoComponent {
       this.filmPicture = this.ticketData.vorstellungsplatzList[0].vorstellung.film.bildLink;
       this.filmInformation = this.ticketData.vorstellungsplatzList[0].vorstellung.film.beschreibung;
       this.filmTrailerURL = this.ticketData.vorstellungsplatzList[0].vorstellung.film.trailerLink;
+
+      this.datum = this.ticketData.vorstellungsplatzList[0].vorstellung.datum;
+      this.zeit = this.ticketData.vorstellungsplatzList[0].vorstellung.zeit;
     })
   }
 
