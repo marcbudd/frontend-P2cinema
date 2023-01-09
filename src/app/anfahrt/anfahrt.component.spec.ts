@@ -10,7 +10,7 @@ describe('AnfahrtComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ AnfahrtComponent ]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(AnfahrtComponent);
     component = fixture.componentInstance;

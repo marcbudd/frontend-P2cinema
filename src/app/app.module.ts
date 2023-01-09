@@ -11,9 +11,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatInputModule} from '@angular/material/input';
 import {MatMenu, MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
-
+import {HttpClientModule} from "@angular/common/http";
+import { MatRadioModule } from '@angular/material/radio';
 
 import { AppComponent } from './app.component';
+import {AdminpageComponent} from "./adminpage/adminpage.component";
 import { HeaderComponent } from './header/header.component';
 import { HomescreenComponent } from './homescreen/homescreen.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +29,11 @@ import { EinloggenComponent } from './einloggen/einloggen.component';
 import { RegistrierenComponent } from './registrieren/registrieren.component';
 import { SeatreservationComponent } from './seatreservation/seatreservation.component';
 import { RegistrierungComponent } from './registrierung/registrierung.component';
+import { FilmaddComponent} from "./filmadd/filmadd.component";
+import { KundendatenComponent} from "./kundendaten/kundendaten.component";
+import { KaufenComponent} from "./kaufen/kaufen.component";
+import { CodeComponent} from "./code/code.component";
+import { TicketinfoComponent } from './ticketinfo/ticketinfo.component';
 
 
 @NgModule({
@@ -41,6 +48,13 @@ import { RegistrierungComponent } from './registrierung/registrierung.component'
     EinloggenComponent,
     RegistrierenComponent,
     SeatreservationComponent,
+    RegistrierungComponent,
+    AdminpageComponent,
+    FilmaddComponent,
+    KundendatenComponent,
+    KaufenComponent,
+    CodeComponent,
+    TicketinfoComponent
 
   ],
   imports: [
@@ -58,7 +72,8 @@ import { RegistrierungComponent } from './registrierung/registrierung.component'
     MatNativeDateModule,
     MatMenuModule,
     MatIconModule,
-    MatIconModule
+    HttpClientModule,
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

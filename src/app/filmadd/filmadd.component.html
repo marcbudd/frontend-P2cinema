@@ -1,0 +1,73 @@
+<div class = "anfahrtBackground"></div>
+<div class ="sidenav">
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="buttonsHeaderMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" mat-button>
+    <button mat-menu-item routerLink = "/adminpage" class = "menuItem">
+      <span>Film hinzufügen</span>
+    </button>
+    <button mat-menu-item routerLink = "/filmadd" class="menuItem">
+      <span>Kino hinzufügen</span>
+    </button>
+    <button mat-menu-item routerLink = "/kundendaten" class="menuItem">
+      <span>Kundendaten einsehen</span>
+    </button>
+  </mat-menu>
+</div>
+
+
+
+<div class = Foreground>
+
+  <div class = filmadd>
+    <div class="lockedimg">
+      <a>Kino hinzufügen🏤</a>
+      <br>
+
+    </div>
+    <div class = stadt>
+      <mat-form-field appearance="fill" class="stadt">
+        <mat-label>Stadt</mat-label>
+        <input matInput placeholder="München" [formControl]="stadt" required ngModel="{{stadtInsert}}">
+        <mat-error *ngIf="stadt.invalid">{{getErrorMessageStadt()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class = adresse>
+      <mat-form-field appearance="fill" class="adresse">
+        <mat-label>Adresse</mat-label>
+        <input matInput placeholder="Himmelsweg 3" [formControl]="adresse" required ngModel="{{adresseInsert}}">
+        <mat-error *ngIf="adresse.invalid">{{getErrorMessageAdresse()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class = mail>
+      <mat-form-field appearance="fill" class="mail">
+        <mat-label>E-Mail</mat-label>
+        <input matInput placeholder="cinema@gmx.de" [formControl]="mail" required ngModel="{{mailInsert}}">
+        <mat-error *ngIf="mail.invalid">{{getErrorMessageMail()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class = telefon>
+      <mat-form-field appearance="fill" class="telefon">
+        <mat-label>Telefonnummer</mat-label>
+        <input matInput placeholder="015253190738" [formControl]="telefon" required ngModel="{{telefonInsert}}">
+        <mat-error *ngIf="telefon.invalid">{{getErrorMessageTelefon()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <u>Kinobild auswählen: </u>
+    <br>
+    <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+    <br>
+    <br>
+    <div class = button>
+      <button class = buttonRegistrieren mat-raised-button color="primary" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Hinzufügen</span></button>
+    </div>
+
+
+  </div>
+</div>
+<div>

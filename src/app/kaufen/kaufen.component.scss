@@ -1,0 +1,56 @@
+.background{
+  background: linear-gradient(to right, rgba(0,0,0,1) 0.2%, transparent 90%), url(../../assets/img/CinemaBg2.png);
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.kaufenBackground {
+  background-image: url(../../assets/img/Cinema.PNG) ;
+  filter: blur(8px);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.buttonBestaetigen {
+  margin-top: 40px;
+  margin-left: 115px;
+  position: absolute;
+}
+
+.buttonBestaetigen:hover{
+  scale:1.1;
+  filter: drop-shadow(5px 5px 5px rgb(183, 1, 1));
+  transition: 2s;
+}
+
+.foregroundKaufen{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  border: 6px solid rgb(181, 180, 180);
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;    top: 50%;
+  transform: translate(-50%, -50%);
+  filter: green;
+  z-index: 2;
+  max-height: 500px;
+  min-height: 500px;
+  max-width: 350px;
+  min-width: 350px;
+  padding: 1%;
+  margin: 60px;
+  text-align: align;
+  img{
+    width:40%;
+    height: 40%;
+    position:right;
+    margin-left: 100px;
+  }
+}
+
+

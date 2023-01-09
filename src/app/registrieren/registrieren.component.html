@@ -1,6 +1,10 @@
 <div class = "homescreenBackground"></div>
 <div class = Foreground>
-  <div class = foregroundLeftSide>
+
+  <div class = foregroundRightSide>
+    <div class="lockedimg">
+      <img class = "logolocked" src = "assets/img/logoTransparent.png">
+    </div>
     <div class = vorname>
       <!-- vorname -->
       <mat-form-field appearance="fill" class="vorname">
@@ -10,31 +14,31 @@
       </mat-form-field>
     </div>
     <div class = nachname>
-<!-- nachname -->
-        <mat-form-field appearance="fill" class="nachname">
-          <mat-label>Nachname</mat-label>
-          <input matInput placeholder="Cinema" [formControl]="nachname" required ngModel="{{nachnameInsert}}">
-          <mat-error *ngIf="nachname.invalid">{{getErrorMessageNachname()}}</mat-error>
-        </mat-form-field>
+      <!-- nachname -->
+      <mat-form-field appearance="fill" class="nachname">
+        <mat-label>Nachname</mat-label>
+        <input matInput placeholder="Cinema" [formControl]="nachname" required ngModel="{{nachnameInsert}}">
+        <mat-error *ngIf="nachname.invalid">{{getErrorMessageNachname()}}</mat-error>
+      </mat-form-field>
     </div>
     <div class = Email>
-        <!-- e-mail -->
-        <mat-form-field appearance="fill" class="email">
-          <mat-label>E-Mail</mat-label>
-          <input matInput placeholder="OacarCinema@BestCinema.com" [formControl]="email" required ngModel="{{emailInsert}}">
-          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-        </mat-form-field>
+      <!-- e-mail -->
+      <mat-form-field appearance="fill" class="email">
+        <mat-label>E-Mail</mat-label>
+        <input matInput placeholder="OacarCinema@BestCinema.com" [formControl]="email" required ngModel="{{emailInsert}}">
+        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
     </div>
     <div class = Passwort>
       <!-- password -->
-        <mat-form-field appearance="fill" class="passwort">
-          <mat-label>Passwort</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required ngModel="{{passwortInsert}}">
-          <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-        </mat-form-field>
+      <mat-form-field appearance="fill" class="passwort">
+        <mat-label>Passwort</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" [formControl]="password" required ngModel="{{passwortInsert}}">
+        <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+      </mat-form-field>
     </div>
     <div>
       <div class = button>
@@ -42,23 +46,27 @@
       </div>
     </div>
   </div>
-  <div class = foregroundRightSide>
-    <h1>Genieße alle Vorteile einer Registrierung!</h1>
-    <h2>Einfach E-Ticket nutzen</h2>
+  <div class = foregroundLeftSide>
+    <br>
+    <h1>Genießen Sie alle Vorteile einer Registrierung! 🎉</h1>
+    <h2>E-Ticket nutzen</h2>
     <ul>
-      <li>Durch das E-Ticket nie mehr in der Kassenwarteschlange stehen</li>
-      <li>Vorzeigen und direkt in den Film</li>
-      <li>Sei schnell und wähle online deinen Lieblingsplatz aus</li>
+      <p>Kein Anstehen an der Kinokasse</p>
+      <p>Sichere dir online deinen Lieblingssitzplatz </p>
+      <p>Zahle ganz bequem online</p>
+      <br>
     </ul>
     <h2>Abgestimmte Inhalte</h2>
     <ul>
-      <li>Bekomme Filmvorschläge angezeigt, welche auf dich abgestimmt sind</li>
+      <p>Bekomme Filmvorschläge angezeigt, welche auf dich abgestimmt sind</p>
+      <br>
     </ul>
     <h2>Bewertungsfunktion</h2>
     <ul>
-      <li>Werde zum echten Filmkritiker durch das bewerten von Filmen und dem verfassen von Kommentaren</li>
+      <p>Werde zum echten Filmkritiker und bewerte die Filme</p>
+      <p>Lies dir Bewertungen anderer Nutzer</p>
     </ul>
-    <h1>Sei Teil von etwas ganz GROßEM</h1>
-    <h1>Sei Teil der Community</h1>
-    </div>
+    <br>
+    <div class ="community"><h1>Sei Teil der Oscar Cinema Community </h1></div>
+  </div>
 </div>

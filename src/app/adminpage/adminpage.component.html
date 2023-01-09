@@ -1,0 +1,76 @@
+<div class = "anfahrtBackground"></div>
+<div class ="sidenav">
+
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="buttonsHeaderMenu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" mat-button>
+    <button mat-menu-item routerLink = "/adminpage" class = "menuItem">
+      <span>Film hinzufügen</span>
+    </button>
+    <button mat-menu-item routerLink = "/filmadd" class="menuItem">
+      <span>Kino hinzufügen</span>
+    </button>
+    <button mat-menu-item routerLink = "/kundendaten" class="menuItem">
+      <span>Kundendaten einsehen</span>
+    </button>
+  </mat-menu>
+</div>
+
+
+
+<div class = Foreground>
+
+  <div class = filmadd>
+    <div class="lockedimg">
+    </div>
+    <div class="lockedimg">
+      <a>Film hinzufügen🎬</a>
+      <br>
+
+    </div>
+    <div class = filmname>
+      <mat-form-field appearance="fill" class="filmname">
+        <mat-label>Filmname</mat-label>
+        <input matInput placeholder="Avatar" [formControl]="filmname" required ngModel="{{filmnameInsert}}">
+        <mat-error *ngIf="filmname.invalid">{{getErrorMessageFilmname()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class = beschreibung>
+      <mat-form-field appearance="fill" class="beschreibung">
+        <mat-label>Beschreibung</mat-label>
+        <input matInput placeholder="Es geht um einen Jungen..." [formControl]="beschreibung" required ngModel="{{beschreibungInsert}}">
+        <mat-error *ngIf="beschreibung.invalid">{{getErrorMessageBeschreibung()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class = genre>
+      <mat-form-field appearance="fill" class="genre">
+        <mat-label>Genre</mat-label>
+        <input matInput placeholder="Komödie" [formControl]="genre" required ngModel="{{genreInsert}}">
+        <mat-error *ngIf="genre.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class = altersfreigabe>
+      <mat-form-field appearance="fill" class="altersfreigabe">
+        <mat-label>Altersfreigabe</mat-label>
+        <input matInput placeholder="12" [formControl]="altersfreigabe" required ngModel="{{altersfreigabeInsert}}">
+        <mat-error *ngIf="altersfreigabe.invalid">{{getErrorMessageAltersfreigabe()}}</mat-error>
+      </mat-form-field>
+    </div>
+
+    <u>Titelbild auswählen: </u>
+    <br>
+    <input type="file" class="file-upload" onchange="console.log(event.target.files)">
+    <br>
+    <br>
+    <div class = button>
+      <button class = buttonRegistrieren mat-raised-button color="primary" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Hinzufügen</span></button>
+    </div>
+
+
+  </div>
+</div>
+<div>

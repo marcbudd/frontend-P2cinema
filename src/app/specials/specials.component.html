@@ -1,16 +1,25 @@
 <div class = "specialsBackground"></div>
-<div class="specials"><h1>Specials</h1>
-    <div class="componentsInLoop" *ngFor="let special of datalistSpecials">
+<div class="specials"><h1>✨Specials im Oscar Cinema ✨</h1>
+  <div class="componentsInLoop" *ngFor="let special of datalistSpecials">
     <div class = "specialname">
-        <h1>{{special.specialname}}</h1>
+      <h1>{{special.specialname}}</h1>
     </div>
     <div>
-    <div class = image>
+      <div class = image>
         <img src = {{special.source}}>
-    </div>
-    <div class = description>
+      </div>
+      <div class = description>
         {{special.description}}
+      </div>
+      <div class = description2>
+        {{special.describtion2}}
+      </div>
+      <div class = description3>
+        {{special.describtion3}}
+      </div>
+      <div class = description4>
+        {{special.description4}}
+      </div>
     </div>
-    </div>
-    
+  </div>
 </div>

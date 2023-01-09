@@ -7,7 +7,7 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./registrieren.component.scss']
 })
 export class RegistrierenComponent {
-  
+
   //password
   hide = true;
   passwortInsert:any;
@@ -51,10 +51,10 @@ export class RegistrierenComponent {
   //Button
   buttonClicked(){
     if((this.emailInsert && this.vornameInsert && this.nachnameInsert && this.passwortInsert) != null){
-    // if(){ proof if user exist insert to Database
-    //
-    // }
-    //register to database and send mail
+      // if(){ proof if user exist insert to Database
+      //
+      // }
+      //register to database and send mail
     }
   }
 }

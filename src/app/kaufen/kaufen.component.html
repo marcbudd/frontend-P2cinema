@@ -1,0 +1,20 @@
+<div class = kaufenBackground></div>
+<div class = foregroundKaufen>
+  <div class="lockedimg">
+    <img class = "logolocked" src = "assets/img/logoTransparent.png">
+  </div>
+  <br>
+
+  <h1>Zahlungsmethode:</h1>
+  <ul>
+    <p><mat-radio-button [color]="color" value="2">Lastschrift</mat-radio-button></p>
+    <p><mat-radio-button [color]="color" value="2">Überweisung</mat-radio-button></p>
+    <p><mat-radio-button [color]="color" value="2">Paypal</mat-radio-button></p>
+    <p><mat-radio-button [color]="color" value="2">Klarna</mat-radio-button></p>
+
+
+  </ul>
+  <div class = button>
+    <button class = buttonBestaetigen routerLink= "/code" mat-raised-button color="primary" routerLinkActive="active" ariaCurrentWhenActive="page"><span>Bestätigen</span> </button>
+  </div>
+</div>
