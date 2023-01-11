@@ -222,9 +222,11 @@ export class SeatreservationComponent{
     if(seat.selected == true){
       seat.selected = false; //not selected
       seat.booked = false; //not booked either
-      this.http.put(freigabeUrl, {}) //free seat in the backend too
+      this.http.put(freigabeUrl, {}).subscribe(response => { //free seat in the backend too
+        console.log(response);
+      })
       this.gesamtpreisberechnung()
-      return seat.selected;
+      return seat.booked;
     }
 
     //http request tries to reservate seat: if it is already reservated: error & isFree = false

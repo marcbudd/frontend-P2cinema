@@ -2,7 +2,7 @@
   <h1 class="heading">Deine Plätze wurden reserviert!</h1>
 
   <div>
-    <h2>{{ filmName }}</h2>
+    <h2>{{ filmName }} - {{ datum }} {{ zeit }} Uhr</h2>
     <a>{{ filmInformation }}</a><br>
     <img class = image [src] = "filmPicture">
   </div>
@@ -18,4 +18,13 @@
   <div class="ticketnummer">
     Deine Ticketnummer: {{ticketData.id}}
   </div>
+
+  <div class="adresse">
+    <div class="zwischentitel">Adresse: </div>
+    Kinosaal {{saalNumber}} <br>
+    {{ kinoName }}<br>
+    {{ kinoPlz }} {{ kinoCity }}<br>
+    {{ kinoStreet }} {{ kinoNumber }}<br>
+  </div>
+
 </div>
